@@ -17,3 +17,17 @@ To execute all tests, run:
 ```shell
 docker-compose run --rm app sh -c "python manage.py test"
 ```
+
+### Migrations
+
+To generate migrations, run:
+
+```shell
+docker-compose run --rm app sh -c "python manage.py makemigrations"
+```
+
+To apply migrations, run:
+
+```shell
+docker-compose run --rm app sh -c "python manage.py migrate"
+```
