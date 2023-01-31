@@ -1,3 +1,5 @@
 from django.shortcuts import render  # noqa
 
-# Create your views here.
+
+def home(response):
+    return render(response, 'home.html', {})
