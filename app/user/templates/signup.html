@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% load i18n %}
+    <p>{% trans 'SignUpHeading' %}</p>
+    {% if have_errors %}
+        <p>Signup error</p>
+    {% endif %}
+    <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button>{% trans 'SignUpSubmit' %}</button>
+    </form>
+{% endblock %}
