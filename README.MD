@@ -31,3 +31,14 @@ To apply migrations, run:
 ```shell
 docker-compose run --rm app sh -c "python manage.py migrate"
 ```
+
+```shell
+docker-compose run --rm app sh -c "pip install -r requirements.txt"
+```
+
+To compile localization messages:
+
+```shell
+cd app
+django-admin compilemessages
+```
