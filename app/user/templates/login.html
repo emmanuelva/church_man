@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>{% trans 'LoginTitle' %}</p>
+    <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button>{% trans 'LoginSubmitButton' %}</button>
+    </form>
+{% endblock %}
